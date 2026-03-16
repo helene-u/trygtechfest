@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 180px;
+    scroll-padding-top: 120px;
 }
 
 * {
@@ -18,6 +18,10 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "27 Sans", serif;
+}
+
+.span-2 {
+    grid-row: span 2;
 }
 
 h1 {
@@ -53,18 +57,24 @@ h1::after {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo-img {
-    height: 120px;
+    height: 80px;
     width: auto;
-    margin-bottom: 0;
 }
 
 .logo-link {
@@ -73,15 +83,32 @@ h1::after {
     text-decoration: none;
 }
 
+.conf-date {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #f00000;
+    border-left: 3px solid #f00000;
+    padding-left: 20px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-links {
     display: flex;
-    list-style: none;
-    gap: 40px;
+    gap: 30px;
     margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
 }
 
 .nav-links li {
-    margin-left: 20px;
     transition: transform 0.2s ease;
 }
 
@@ -92,10 +119,10 @@ h1::after {
 .nav-links a {
     text-decoration: none;
     color: #333;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     position: relative;
     padding-bottom: 5px;
     transition: color 0.3s ease;
@@ -120,14 +147,38 @@ h1::after {
     width: 100%;
 }
 
+.search-container {
+    width: 250px;
+    margin: 0;
+}
+
+#siteSearch {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#siteSearch:focus {
+    border-color: #f00000;
+}
+
+.hidden-item {
+    display: none !important;
+}
+
 .section {
-    padding: 180px 20px 80px 20px;
-    min-height: 100vh;
+    padding: 60px 20px 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #d9d9d9;
+}
+
+#agenda {
+    padding-top: 120px;
 }
 
 .agenda-container {
@@ -136,7 +187,22 @@ h1::after {
     gap: 15px;
     max-width: 1000px;
     width: 90%;
-    margin-top: 30px;
+    margin: 30px auto;
+}
+
+.agenda-container.is-searching {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.is-searching .time-slot {
+    border: none;
+    background: none;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    color: #f00000;
+    margin-top: 20px;
 }
 
 .agenda-header {
@@ -146,14 +212,37 @@ h1::after {
     font-weight: bold;
     text-align: center;
     border-radius: 8px;
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .time-slot {
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #555;
+    color: #333;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 5px;
+    padding-right: 15px;
+    border-right: 2px solid #ccc;
+    position: relative;
+}
+
+.time-slot::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    background: #f00000;
+    border-radius: 50%;
+    border: 2px solid #d9d9d9;
 }
 
 .session-card {
@@ -170,16 +259,76 @@ h1::after {
 .session-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #d00000;
+}
+
+.session-card p {
+    margin-top: 10px;
+}
+
+a.session-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.click-hint {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #f00000;
+    opacity: 0.7;
+}
+
+.session-card:hover .click-hint {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.empty-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 5px solid transparent;
+    box-shadow: none;
+    cursor: default;
+}
+
+.agenda-list {
+    margin: 10px 0 10px 20px;
+}
+
+.agenda-list li::marker {
+    color: #f00000;
+}
+
+.agenda-list li {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.facilitator {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
 }
 
 .full-width {
     grid-column: 2 / 4;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .break {
+    padding: 20px;
+    border-radius: 8px;
     border-left: 5px solid #ccc;
     background-color: #ffd9c2;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-style: italic;
 }
 
@@ -193,6 +342,172 @@ h1::after {
     margin-bottom: 8px;
 }
 
+#talks {
+    padding-top: 80px;
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.speaker-card {
+    border-top: 5px solid #f00000;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 10px;
+    scroll-margin-top: 200px;
+}
+
+.speaker-card:target {
+    border: 2px solid #f00000;
+    animation: highlight 2s ease-out;
+}
+
+@keyframes highlight {
+    0% { background-color: #feebeb; }
+    100% { background-color: white; }
+}
+
+.speaker-info h2 {
+    color: #444;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.speaker-info h3 {
+    color: #f00000;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.speaker-info h4 {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.speaker-info p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.speaker-bio {
+    line-height: 1.6;
+    color: #444;
+}
+
+.read-more-check {
+    display: none;
+}
+
+.read-more-content {
+    display: none;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: #f00000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.read-more-btn::before {
+    content: 'Les mer';
+}
+
+.read-more-check:checked ~ .speaker-bio .read-more-content {
+    display: inline;
+}
+
+.read-more-check:checked ~ .read-more-btn::before {
+    content: 'Vis mindre';
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #f00000;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    background-color: #d00000;
+}
+
+.site-footer {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.footer-info a {
+    color: #f00000;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-links a {
+    color: #999;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
 @media (max-width: 768px) {
 
     h1 {
@@ -201,28 +516,71 @@ h1::after {
     }
 
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 0;
         flex-direction: column;
         gap: 10px;
     }
 
     .nav-container {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-group {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
     }
 
     .logo-img {
-        height: 70px;
+        height: 50px;
+    }
+
+    .conf-date {
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.2rem;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
     }
 
     .nav-links {
-        gap: 15px;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #siteSearch {
+        width: 100%;
+
+        text-align: center;
     }
 
     .section {
-        padding-top: 160px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    #agenda {
+        padding-top: 210px;
     }
 
     .agenda-container {
@@ -234,9 +592,20 @@ h1::after {
     }
 
     .time-slot {
-        justify-content: flex-start;
-        margin-bottom: 5px;
-        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #f00000;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .time-slot::after {
+        content: none;
     }
 
     .session-card {
@@ -253,11 +622,49 @@ h1::after {
         grid-column: 1;
     }
 
+    .break {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .empty-card {
+        display: none;
+    }
+
     .agenda-header.room, .agenda-header.time {
         display: none;
     }
 
     .room-label {
         display: inline-block;
+    }
+
+    #talks {
+        padding-top: 80px;
+    }
+
+    .talks-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .site-footer {
+        padding: 25px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
 }

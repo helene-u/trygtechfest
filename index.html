@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/tryg.ico">
     <title>Tryg Techfest</title>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#agenda" class="logo-link">
-                <img src="images/red-logo.png" alt="Techfest logo" class="logo-img">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#agenda">Agenda</a></li>
-                <li><a href="#talks">Foredrag</a></li>
-            </ul>
+            <div class="logo-group">
+                <a href="#agenda" class="logo-link">
+                    <img src="images/red-logo.png" alt="Techfest logo" class="logo-img">
+                </a>
+                <span class="conf-date">16. APRIL 2026</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#talks">Foredrag</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="siteSearch" placeholder="Søk.." onkeyup="filterContent()">
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -29,34 +38,327 @@
             <div class="agenda-header room">Rambla 4. etasje</div>
 
             <div class="time-slot">09:00</div>
-            <div class="session-card full-width">
-                <h3>Keynote i Laurie Grundt</h3>
-                <p>Fotmob - Hvordan få millioner av mennesker til å komme tilbake - hver eneste dag (NO)</p>
+            <a href="#christer-nordvik-card" class="session-card room-lg">
+                <span class="room-label">Laurie Grundt - 25 min</span>
+                <h3>Fotmob - Hvordan få millioner av mennesker til å komme tilbake - hver eneste dag (NO)</h3>
+                <p>Christer Nordvik - Fotmob</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+            <div class="session-card room-r empty-card">
+                <span class="room-label">Rambla 4. etasje</span>
+            </div>
+
+            
+            <div class="time-slot">09:25</div>
+            <div class="session-card room-lg">
+                <span class="room-label">Laurie Grundt - 30 min</span>
+                <h3>Parterapi (NO)</h3>
+                <p>Inger Lise Angelskår og Christer Kjørsvik - Tryg</p>
+            </div>
+            <div class="session-card room-r empty-card">
+                <span class="room-label">Rambla 4. etasje</span>
             </div>
 
             <div class="time-slot">10:00</div>
-            <div class="session-card full-width break">
+            <div class="full-width break">
                 <h3>Pause</h3>
             </div>
 
             <div class="time-slot">10:15</div>
-            <div class="session-card room-lg">
-                <span class="room-label">Laurie Grundt</span>
+            <a href="#simen-armond-card" class="session-card room-lg">
+                <span class="room-label">Laurie Grundt - 25 min</span>
                 <h3>Fra konsern til startup til solo: Det som faktisk betyr noe (NO)</h3>
                 <p>Simen Armond - Wisteria Consulting</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+            <div class="session-card room-r span-2">
+                <span class="room-label">Rambla 4. etasje - 45 min</span>
+                <h3>Pitching Innovasjonskonkurransen</h3>
+                <p>Jury:</p>
+                <ul class="agenda-list">
+                    <li>Tone Gamlemshaug</li>
+                    <li>Rune Skår</li>
+                    <li>Ane Marte Skogesal</li>
+                    <li>Abhishek Shah</li>
+                </ul>
+                <p class="facilitator">Fasilitert av Thomas Tjøstheim og Helene Underhaug</p>
+            </div>
+
+            <div class="time-slot">10:40</div>
+            <a href="#jan-skathun-card" class="session-card room-lg">
+                <span class="room-label">Laurie Grundt - 20 min</span>
+                <h3>SaaS is dead (NO)</h3>
+                <p>Jan Åge Skathun - Quantfolio</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+
+            <div class="time-slot">11:00</div>
+            <div class="full-width break">
+                <h3>Lunsj</h3>
+            </div>
+
+            <div class="time-slot">12:00</div>
+            <div class="session-card room-lg span-2">
+                <span class="room-label">Laurie Grundt - 45 min</span>
+                <h3>PANELDEBATT AI (NO)</h3>
+                <p>Deltakere:</p>
+                <ul class="agenda-list">
+                    <li>Nora Gjøen-Gjøsæther - Kantega</li>
+                    <li>Svein Arne Hammersland - Tryg</li>
+                    <li>Inger Lise Angelskår - Tryg</li>
+                    <li>Simen Armond - Wistera Consulting</li>
+                </ul>
+                <p class="facilitator">Fasilitert av Simen Aasen Engebretsen og Håvard Nes - Itera</p>
+            </div>
+            <a href="#anita-drange-card" class="session-card room-r">
+                <span class="room-label">Rambla 4. etasje - 15 min</span>
+                <h3>Fra gjett til rett (NO)</h3>
+                <p>Anita Norheim Drange - Tryg</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+
+            <div class="time-slot">12:15</div>
+            <a href="#gunn-kinden-card" class="session-card room-r">
+                <span class="room-label">Rambla 4. etasje - 25 min</span>
+                <h3>From Assistant to Agent. When AI Takes Action (ENG)</h3>
+                <p>Gunn Marit Kinden - Tryg</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+
+            <div class="time-slot">12:45</div>
+            <div class="full-width break">
+                <h3>Pause</h3>
+            </div>
+
+            <div class="time-slot">13:00</div>
+            <div class="session-card room-lg span-2">
+                <span class="room-label">Laurie Grundt - 30 min</span>
+                <h3>Hva skal vi med utviklere - kritiske refleksjoner rundt hvorfor vi fremdeles må tenke selv? (NO)</h3>
+                <p>André Heie Vik - KnowIT</p>
             </div>
             <div class="session-card room-r">
-                <span class="room-label">Rambla 4. etasje</span>
-                <h3>Pitching Innovasjonskonkurransen</h3>
-                <p>Jury: Tone Gamlemshaug, Rune Skår, Ane Marte Skogesal og Abhishek Shah</p>
-                <p>Fasilitert av Thomas Tjøstheim og Helene Underhaug</p>
+                <span class="room-label">Rambla 4. etasje - 15 min</span>
+                <h3>Sikkerhet i algoritmer</h3>
+                <p>Astrid Olsson - Synlighet</p>
             </div>
+
+            <div class="time-slot">13:15</div>
+            <a href="#hege-erdal-card" class="session-card room-r span-2">
+                <span class="room-label">Rambla 4. etasje - 20 min</span>
+                <h3>Team og mangfold - kvifor er dette ein viktig kombinasjon</h3>
+                <p>Hege Erdal - KS Digital</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
+
+            <div class="time-slot">13:30</div>
+            <a href="#bjorn-melvold-card" class="session-card room-lg">
+                <span class="room-label">Laurie Grundt - 15 min</span>
+                <h3>Generativ KI som kreativt verktøy</h3>
+                <p>Bjørn Melvold - KnowIT</p>
+                <span class="click-hint">Les mer om foredraget →</span>
+            </a>
 
         </div>
     </section>
 
     <section id="talks" class="section">
         <h1 class="agenda-title">Foredrag</h1>
+
+        <div class="talks-grid">
+
+            <div class="speaker-card" id="christer-nordvik-card">
+                <div class="speaker-info">
+                    <h2>Fotmob - Hvordan få millioner av mennesker til å komme tilbake - hver eneste dag (NO)</h2>
+                    <h3>Christer Nordvik</h3>
+                    <h4>Fotmob</h4>
+                    <input type="checkbox" id="read-more-1" class="read-more-check">
+                    <p class="speaker-bio">
+                        FotMob er fotballappen millioner av fans åpner flere ganger om dagen, ofte uten å tenke over det.
+                        <span class="read-more-content">
+                            Med over 20 millioner månedlige brukere har FotMob blitt en del av hverdagen til fotballsupportere 
+                            verden over, bygget gjennom kompromissløst fokus på produkt, brukeropplevelse og kultur - uten 
+                            eksterne investorer og med lønnsom drift.<br><br>I denne sesjonen deler medgrunder og CEO Christer 
+                            Nordvik hvordan FotMob jobber for å bygge digitale tjenester som ikke bare lastes ned, men faktisk
+                            brukes igjen og igjen. Hvordan kan produktvalg, kultur og mekanismer for oppmerksomhet og lojalitet bidra til brukersuksess?
+                        </span>
+                    </p>
+                    <label for="read-more-1" class="read-more-btn"></label>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="simen-armond-card">
+                <div class="speaker-info">
+                    <h2>Fra konsern til startup til solo: Det som faktisk betyr noe (NO)</h2>
+                    <h3>Simen Armond</h3>
+                    <h4>Wisteria Consulting</h4>
+                    <input type="checkbox" id="read-more-2" class="read-more-check">
+                    <p class="speaker-bio">
+                        Simen startet strømselskapet Volte som et innovasjonsprosjekt i Eviny. 
+                        <span class="read-more-content">
+                            Som daglig leder bygget han opp et team på 30 personer og leverte avansert 
+                            energiteknologi til bedriftsmarkedet. Selskapet ble lagt ned etter fem år 
+                            fordi produktene ikke solgte. I samarbeid med Husleie.no bygget han Husleiestrøm 
+                            AS, som ble solgt etter drøyt ett år - i sterk vekst. Med denne innsikten 
+                            jobber han nå alene med egne selskaper. Med AI i verktøykassen reflekterer
+                            han over lærdommen fra disse reisene og hva som er den felles læringen.
+                        </span>
+                    </p>
+                    <label for="read-more-2" class="read-more-btn"></label>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="jan-skathun-card">
+                <div class="speaker-info">
+                    <h2>SaaS is dead (NO)</h2>
+                    <h3>Jan Åge Skathun</h3>
+                    <h4>Quantfolio</h4>
+                    <input type="checkbox" id="read-more-3" class="read-more-check">
+                    <p class="speaker-bio">
+                        Quantfolio er et ledende Fintech/SaaS selskap med stor vekst og store enterprise kunder på tradisjonell SaaS modell.
+                        <span class="read-more-content">
+                            Samtidig skjer det et fundamentalt paradigmeskifte på teknologi og AI som utfordrer innovasjonshastighet,
+                            kundegrunnlaget og forretningsmodellen til SaaS globalt. Jan Åge vil fortelle om hvordan Quantfolio tilnærmer 
+                            seg både trusler og muligheter dette skiftet gir! 
+                        </span>
+                    </p>
+                    <label for="read-more-3" class="read-more-btn"></label>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="anita-drange-card">
+                <div class="speaker-info">
+                    <h2>Fra gjett til rett (NO)</h2>
+                    <h3>Anita Norheim Drange</h3>
+                    <h4>Tryg</h4>
+                    <input type="checkbox" id="read-more-4" class="read-more-check">
+                    <p class="speaker-bio">
+                        Hvorfor er det så viktig å snakke med ekte kunder? 
+                        <span class="read-more-content">
+                            Jo, fordi det er kundene som skal bruke det vi lager. 
+                            Lær hvordan brukertesting reduserer antakelser, avdekker 
+                            behov og bidrar til at kundene faktisk forstår løsningene våre.
+                        </span>
+                    </p>
+                    <label for="read-more-4" class="read-more-btn"></label>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="gunn-kinden-card">
+                <div class="speaker-info">
+                    <h2>From Assistant to Agent. When AI Takes Action (ENG)</h2>
+                    <h3>Gunn Marit Kinden</h3>
+                    <h4>Tryg</h4>
+                    <p class="speaker-bio">
+                        AI is moving beyond conversation. It can now navigate services 
+                        and interact with other AI systems. What happens when machines 
+                        start speaking to machines?
+                    </p>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="hege-erdal-card">
+                <div class="speaker-info">
+                    <h2>Team og mangfold - kvifor er dette ein viktig kombinasjon</h2>
+                    <h3>Hege Erdal</h3>
+                    <h4>KS Digital</h4>
+                    <input type="checkbox" id="read-more-5" class="read-more-check">
+                    <p class="speaker-bio">
+                        Kvaliteten på løysingane vi bygger henger tett sammen med mangfoldet i teama våre - faglig, personlig og erfaringsmessig. 
+                        <span class="read-more-content">
+                            I dette foredraget snakker eg om kvifor vi må sjå forbi dei reint tekniske ferdigheitene når vi set saman 
+                            utviklingsteam, og korleis ulike måtar å bidra på faktisk påverkar kvaliteten på det vi utviklar. Kjønnsbalanse er 
+                            ein viktig del av dette - ikkje som eit separat tema, men som ein naturleg del av å bygge gode team med ulike 
+                            perspektiv og styrkar. Undervegs vil eg også trekke inn erfaringar frå engasjementet mitt for å få fleire jenter 
+                            til å velge IT, og frå arbeidet mitt i SheCodes, som jobbar for å gjere kvinner trygge i rollen sin som utvikler.
+                        </span>
+                    </p>
+                    <label for="read-more-5" class="read-more-btn"></label>
+                </div>
+            </div>
+
+            <div class="speaker-card" id="bjorn-melvold-card">
+                <div class="speaker-info">
+                    <h2>Generativ KI som kreativt verktøy</h2>
+                    <h3>Bjørn Melvold</h3>
+                    <h4>KnowIT</h4>
+                    <p class="speaker-bio">
+                        Det er et innlegg om generativ KI i idéutvikling, vist gjennom 
+                        faktiske prosjekter. Hva som fungerer, og hva som ikke gjør det - og hvordan 
+                        det brukes som en del av arbeidshverdagen.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <a href="#agenda" class="back-to-top" id="backToTop">
+        <span class="arrow">↑</span>
+    </a>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="images/tryg_logo.svg" alt="Tryg Logo">
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2026 Tryg Techfest. Alle rettigheter reservert.</p>
+            <p>Spørsmål? Kontakt oss på <a href="mailto:undhel@tryg.no">mail</a></p>
+        </div>
+        <div class="footer-links">
+            <a href="https://www.tryg.no" target="_blank">tryg.no</a>
+        </div>
+    </div>
+    </footer>
+
 </body>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            backToTop.style.opacity = "1";
+            backToTop.style.pointerEvents = "auto";
+        } else {
+            backToTop.style.opacity = "0";
+            backToTop.style.pointerEvents = "none";
+        }
+    };
+
+    function filterContent() {
+        const input = document.getElementById("siteSearch").value.toLowerCase();
+        const container = document.querySelector('.agenda-container');
+        const cards = document.querySelectorAll('.session-card, .speaker-card, .full-width');
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const headers = document.querySelectorAll('.agenda-header');
+
+        if (input !== "") {
+            container.classList.add('is-searching');
+        } else {
+            container.classList.remove('is-searching');
+        }
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.classList.toggle('hidden-item', !text.includes(input));
+        });
+
+        timeSlots.forEach(slot => {
+            let next = slot.nextElementSibling;
+            let hasVisibleContent = false;
+            while (next && !next.classList.contains('time-slot')) {
+                if (!next.classList.contains('hidden-item')) {
+                    hasVisibleContent = true;
+                    break;
+                }
+                next = next.nextElementSibling;
+            }
+            slot.classList.toggle('hidden-item', !hasVisibleContent && input !== "");
+        });
+
+        headers.forEach(h => h.classList.toggle('hidden-item', input !== ""));
+    };
+
+</script>
 </html>
