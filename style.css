@@ -24,6 +24,10 @@ html {
     grid-row: span 2;
 }
 
+.span-3 {
+    grid-row: span 3;
+}
+
 h1 {
     font-size: 3rem;
     color: #f00000;
