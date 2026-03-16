@@ -205,6 +205,14 @@ h1::after {
     margin-top: 20px;
 }
 
+.is-searching .time-slot::after {
+    content: none;
+}
+
+.is-searching .room-label {
+    display: inline;
+}
+
 .agenda-header {
     background-color: #f00000;
     color: white;
