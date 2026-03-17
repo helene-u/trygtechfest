@@ -30,7 +30,7 @@ html {
 
 h1 {
     font-size: 3rem;
-    color: #f00000;
+    color: #CE0303;
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -46,7 +46,7 @@ h1::after {
     transform: translateX(-50%);
     width: 80px;
     height: 5px;
-    background-color: #f00000;
+    background-color: #CE0303;
     border-radius: 2px;
 }
 
@@ -90,8 +90,8 @@ h1::after {
 .conf-date {
     font-weight: 900;
     font-size: 1.5rem;
-    color: #f00000;
-    border-left: 3px solid #f00000;
+    color: #CE0303;
+    border-left: 3px solid #CE0303;
     padding-left: 20px;
     line-height: 1;
     letter-spacing: -0.5px;
@@ -139,12 +139,12 @@ h1::after {
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: #f00000;
+    background-color: #CE0303;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #f00000;
+    color: #CE0303;
 }
 
 .nav-links a:hover::after {
@@ -165,7 +165,7 @@ h1::after {
 }
 
 #siteSearch:focus {
-    border-color: #f00000;
+    border-color: #CE0303;
 }
 
 .hidden-item {
@@ -205,7 +205,7 @@ h1::after {
     background: none;
     justify-content: flex-start;
     font-size: 1.2rem;
-    color: #f00000;
+    color: #CE0303;
     margin-top: 20px;
 }
 
@@ -218,7 +218,7 @@ h1::after {
 }
 
 .agenda-header {
-    background-color: #f00000;
+    background-color: #CE0303;
     color: white;
     padding: 15px;
     font-weight: bold;
@@ -252,7 +252,7 @@ h1::after {
     top: 7px;
     width: 10px;
     height: 10px;
-    background: #f00000;
+    background: #CE0303;
     border-radius: 50%;
     border: 2px solid #d9d9d9;
 }
@@ -261,7 +261,7 @@ h1::after {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    border-left: 5px solid #f00000;
+    border-left: 5px solid #CE0303;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 
     transition: all 0.3s ease;
@@ -289,7 +289,7 @@ a.session-card {
     margin-top: 10px;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #f00000;
+    color: #CE0303;
     opacity: 0.7;
 }
 
@@ -310,7 +310,7 @@ a.session-card {
 }
 
 .agenda-list li::marker {
-    color: #f00000;
+    color: #CE0303;
 }
 
 .agenda-list li {
@@ -339,7 +339,7 @@ a.session-card {
     padding: 20px;
     border-radius: 8px;
     border-left: 5px solid #ccc;
-    background-color: #ffd9c2;
+    background-color: #E5F2F6;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     font-style: italic;
 }
@@ -367,7 +367,7 @@ a.session-card {
 }
 
 .speaker-card {
-    border-top: 5px solid #f00000;
+    border-top: 5px solid #CE0303;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -380,7 +380,7 @@ a.session-card {
 }
 
 .speaker-card:target {
-    border: 2px solid #f00000;
+    border: 2px solid #CE0303;
     animation: highlight 2s ease-out;
 }
 
@@ -396,7 +396,7 @@ a.session-card {
 }
 
 .speaker-info h3 {
-    color: #f00000;
+    color: #CE0303;
     margin-bottom: 5px;
     font-size: 1.2rem;
 }
@@ -441,7 +441,7 @@ a.session-card {
 
 .read-more-btn {
     display: inline-block;
-    color: #f00000;
+    color: #CE0303;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
@@ -467,7 +467,7 @@ a.session-card {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #f00000;
+    background-color: #CE0303;
     color: white;
     text-decoration: none;
     border-radius: 50%;
@@ -518,7 +518,7 @@ a.session-card {
 }
 
 .footer-info a {
-    color: #f00000;
+    color: #CE0303;
     text-decoration: none;
 }
 
@@ -625,7 +625,7 @@ a.session-card {
         margin-top: 20px;
         margin-bottom: 10px;
         font-size: 1.1rem;
-        color: #f00000;
+        color: #CE0303;
         border: none;
         background: none;
         padding: 0;
