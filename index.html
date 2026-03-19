@@ -648,5 +648,37 @@
         headers.forEach(h => h.classList.toggle('hidden-item', input !== ""));
     };
 
+    const textInput = document.getElementById("siteSearch");
+    const phrases = ["Søk etter 'AI'...", "Søk etter 'Parterapi'...", "Søk etter foredragsholder...", "Søk etter 'Innovasjon'..."];
+    let phraseIndex = 0;
+    let characterIndex = 0;
+
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (characterIndex < currentPhrase.length) {
+            textInput.setAttribute("placeholder", currentPhrase.substring(0, characterIndex + 1));
+            characterIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (characterIndex > 0) {
+            textInput.setAttribute("placeholder", currentPhrase.substring(0, characterIndex - 1));
+            characterIndex--;
+            setTimeout(erase, 50);
+        } else {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    type();
+
 </script>
 </html>
